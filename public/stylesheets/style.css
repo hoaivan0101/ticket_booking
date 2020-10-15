@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: 18px "Alata", sans-serif;
+}
+
+@font-face{
+  src:url(../stylesheets/fonts/Alata-Regular.ttf);
+  font-family:Alata;
+}
+@font-face{
+  src:url(../stylesheets/fonts/Lemonada-VariableFont_wght.ttf);
+  font-family:Lemonada;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Add a gray background color and some padding to the footer */  
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+
+/* FIND FILM */
+
+.findfilm{
+ color: white;
+}
+
+
+.findfilm:hover{
+  cursor: pointer;
+  color: red;
+}
+
+
+#findfilm:checked~.header__overlay{
+  display:block !important;
+}
+
+#findfilm:checked~.header__findfilm{
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.header__overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(34, 32, 32, 0.904);
+  display: none !important;
+  z-index: 111;
+  animation: FadeIn linear 0.2s;
+} 
+
+.header__findfilm{
+  position: fixed;
+  top: 5%;
+  left: 20%;
+  right: 20%;
+  min-height: 50px;
+  transform: translateY(-150%);
+  opacity: 0;
+  background:rgba(10, 68, 155, 0.329);
+  transition: transform 0.2s, opacity linear 0.2s;
+  z-index: 222;
+}
+
+.header__findfilm input{
+  background: none;
+  color: white;
+  margin: 2px;
+  width: 70%;
+  border: none;
+  border-bottom: 1px solid;
+  font-size: 18px;
+}
+
+.header__findfilm input:focus{
+  outline:none;
+}
+
+/* HEADER */
+.stick_header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.backtotop{
+  background:rgba(0, 0, 0, 0.733);
+  color: white;
+  position:fixed;
+  left: 80%;
+  bottom: 20px;
+  display: none;
+}
+
+.unhide{
+  display: block;
+}
+
+.img-fluid{
+  height: 450px;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layout/header') -%>
+<link rel="stylesheet" href="/stylesheets/show.css">
+
+<body>
+
+  <%- include('layout/navbar') -%>
+
+
+  <div class="main">
+    <div class="jumbotron text-center">
+      <h1><span class="fa fa-lock"></span> Node Authentication</h1>
+      <p>Login or Register with:</p>
+      <a href="/auth/google" class="btn btn-default"><span class="fa fa-google"></span> Gooogle Login</a>
+      <a href="/auth/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
+      <a href="/auth/register" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
+    </div>
+  </div>
+  <%- include('layout/footer') -%>
+  <%- include('layout/script') -%>
+
+</body>
+
+</html>

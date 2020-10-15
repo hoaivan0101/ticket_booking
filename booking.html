@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nodemy Cinema</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">NODEMY</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">ĐẶT VÉ</a></li>
+        <li><a href="#">PHIM</a></li>
+        <li><a href="#">RẠP/GIÁ VÉ</a></li>
+        <li><a href="#">GIỚI THIỆU</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Đăng ký</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container bg-3 text-center">
+  <div class="jumbotron">
+    <ul class="nav nav-pills">
+        <li class="active"><a data-toggle="tab" href=#filter1>Theo Phim</a></li>
+        <li><a data-toggle="tab" href="#filter2">Theo Rạp</a></li>
+    </ul>
+    <br>
+    <div class="tab-content">
+      <div class="row">
+        <div id="filter1" class="panel panel-default col-sm-4">
+          <div class="panel-heading" style="background-color: olive; color: white;">CHỌN PHIM</div>
+          <div class="panel-body">
+            <ul class="list-group">
+              <li class="list-group-item">Phim 1</li>
+              <li class="list-group-item">Phim 2</li>
+              <li class="list-group-item">Phim 3</li>
+            </ul>
+          </div>
+        </div>
+        <div id="filter1" class="panel panel-default col-sm-4">
+          <div class="panel-heading" style="background-color: olive; color: white">CHỌN RẠP</div>
+          <div class="panel-body">
+            <ul class="list-group">
+              <li class="list-group-item">Rạp 1</li>
+              <li class="list-group-item">Rạp 2</li>
+              <li class="list-group-item">Rạp 3</li>
+            </ul>
+          </div>
+        </div>
+        <div id="filter1" class="panel panel-default col-sm-4">
+          <div class="panel-heading" style="background-color: olive; color: white">CHỌN SUẤT</div>
+          <div class="panel-body">
+            <ul class="list-group">
+              <li class="list-group-item">Suất 1</li>
+              <li class="list-group-item">Suất 2</li>
+              <li class="list-group-item">Suất 3</li>
+            </ul>
+          </div>
+        </div>
+      </div>  
+      <div class="row">
+          <div id="filter2" class="panel panel-default col-sm-4">
+            <div class="panel-heading" style="background-color: olive; color: white;">CHỌN RẠP</div>
+            <div class="panel-body">
+              <ul class="list-group">
+                <li class="list-group-item">Rạp 1</li>
+                <li class="list-group-item">Rạp 2</li>
+                <li class="list-group-item">Rạp 3</li>
+              </ul>
+            </div>
+          </div>
+          <div id="filter2" class="panel panel-default col-sm-4">
+            <div class="panel-heading" style="background-color: olive; color: white">CHỌN PHIM</div>
+            <div class="panel-body">
+              <ul class="list-group">
+                <li class="list-group-item">Phim 1</li>
+                <li class="list-group-item">Phim 2</li>
+                <li class="list-group-item">Phim 3</li>
+              </ul>
+            </div>
+          </div>
+          <div id="filter2" class="panel panel-default col-sm-4">
+            <div class="panel-heading" style="background-color: olive; color: white">CHỌN SUẤT</div>
+            <div class="panel-body">
+              <ul class="list-group">
+                <li class="list-group-item">Suất 1</li>
+                <li class="list-group-item">Suất 2</li>
+                <li class="list-group-item">Suất 3</li>
+              </ul>
+            </div>
+          </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<br><br>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>

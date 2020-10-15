@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layout/header') -%>
+<link rel="stylesheet" href="/stylesheets/show.css">
+
+<body>
+
+  <%- include('layout/navbar') -%>
+
+  <div class="grid wide">
+    <div class="row">
+      <div class="content">
+        <div class="main flex">
+          <div class="img_container" style="background-image: url('<%=data.poster%>')">
+            <div class="middle" data-toggle="modal" data-target="#videoModal">
+              <img class="trailer_play" src="/images/play-video.png" alt="">
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Trailer: <%=data.title%></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <iframe width="100%" height="400" src="<%=data.trailer%>" frameborder="0"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="main_right">
+            <ul>
+              <li class="main_right_lists--review flex">
+                <span class="main_right_lists_left">Tên phim</span>
+                <span class="main_right_lists_right"><%=data.title%></span>
+              </li>
+              <li class="main_right_lists flex">
+                <span class="main_right_lists_left">Rating</span>
+                <span class="main_right_lists_right text-uppercase"><%=data.rating%></span>
+              </li>
+              <li class="main_right_lists flex">
+                <span class="main_right_lists_left">Thời lượng</span>
+                <span class="main_right_lists_right"><%=data.length%> phút</span>
+              </li>
+              <li class="main_right_lists flex">
+                <span class="main_right_lists_left">Quốc gia</span>
+                <span class="main_right_lists_right"><%=data.country%></span>
+              </li>
+              <li class="main_right_lists flex">
+                <span class="main_right_lists_left">Nhà sản xuất</span>
+                <span class="main_right_lists_right"><%=data.producer%></span>
+              </li>
+              <li class="main_right_lists flex">
+                <span class="main_right_lists_left">Thể loại</span>
+                <span class="main_right_lists_right"><%=data.genre%></span>
+              </li>
+              <li class="main_right_lists flex">
+                <span class="main_right_lists_left">Đạo diễn</span>
+                <span class="main_right_lists_right"><%=data.director%></span>
+              </li>
+              <li class="main_right_lists flex">
+                <span class="main_right_lists_left">Diễn viên</span>
+                <span class="main_right_lists_right"><%=data.actor%></span>
+              </li>
+              <li class="main_right_lists flex">
+                <span class="main_right_lists_left">Ngày khởi chiếu</span>
+                <span
+                  class="main_right_lists_right"><%=data.openDate.toJSON().slice(0,10).split('-').reverse().join('/')%></span>
+              </li>
+              <li class="main_right_lists--review flex">
+                <span class="main_right_lists_left">Tóm tắt</span>
+                <span class="main_right_lists_right"><%=data.summary%></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Section - Start Here -->
+    <!-- <div class="container">
+      <div class="aside"></div>
+      <div class="main"></div>
+    </div> -->
+    <%- include('layout/footer') -%>
+    <%- include('layout/script') -%>
+    <script src="/javascripts/movie.js"></script>
+
+</body>
+
+</html>

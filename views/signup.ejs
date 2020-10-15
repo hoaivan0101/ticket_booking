@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layout/header') -%>
+<link rel="stylesheet" href="/stylesheets/show.css">
+
+<body>
+
+  <%- include('layout/navbar') -%>
+
+
+  <div class="main">
+    <div class="jumbotron">
+      <h1 class="text-center"><span class="fa fa-lock"></span> Node Authentication</h1>
+      <!-- <form action="/auth/local/signup" method="post"> -->
+      <input type="text" class="form-control" id="username" name="userName" placeholder="Username">
+      <div class="alert_username"></div>
+      <input type="password" class="form-control" id="password" name="userPassword" placeholder="Password">
+      <div class="alert_password"></div>
+      <input type="text" class="form-control" id="userEmail" name="userEmail" placeholder="Email">
+      <div class="alert_email"></div>
+      <!-- <input type="text" class="form-control" id="userMobile" name="userMobile" placeholder="Phone">
+      <div class="alert_mobile"></div> -->
+      <div class="signup text-right">Go home?<a href="/" style="color:green"> Home</a>
+      </div>
+      <div class="login text-center"><button class="btn btn-light btn_login" type="button">SIGN
+          UP</button>
+      </div>
+      <!-- </form> -->
+    </div>
+  </div>
+  <%- include('layout/footer') -%>
+  <%- include('layout/script') -%>
+
+</body>
+<script src="/javascripts/auth-signup.js"></script>
+
+</html>

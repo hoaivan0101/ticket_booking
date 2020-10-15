@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <%- include('layout/header') -%>
+  <link rel="stylesheet" href="/stylesheets/reservation.css" />
+  <link rel="stylesheet" href="/stylesheets/GRID.css">
+  <script src="/javascripts/jquery-3.5.1.min.js"></script>
+  <title>Movie Seat Booking</title>
+</head>
+
+<body>
+  <%- include('layout/navbar') -%>
+  <div class="body">
+    <div class="bodymain">
+      <div class="main main_left">
+        <ul class="showcase">
+          <li>
+            <div class="seat fixed"></div>
+            <small>N/A</small>
+          </li>
+          <li>
+            <div class="seat selected fixed"></div>
+            <small>Selected</small>
+          </li>
+          <li>
+            <div class="seat occupied fixed"></div>
+            <small>Occupied</small>
+          </li>
+        </ul>
+
+        <div class="container">
+          <div class="screen"></div>
+
+          <div class="row">
+            <div class="seat seat--0--0--"></div>
+            <div class="seat seat--0--1--"></div>
+            <div class="seat seat--0--2--"></div>
+            <div class="seat seat--0--3--"></div>
+            <div class="seat seat--0--4--"></div>
+            <div class="seat seat--0--5--"></div>
+            <div class="seat seat--0--6--"></div>
+            <div class="seat seat--0--7--"></div>
+          </div>
+
+          <div class="row">
+            <div class="seat seat--1--0--"></div>
+            <div class="seat seat--1--1--"></div>
+            <div class="seat seat--1--2--"></div>
+            <div class="seat seat--1--3--"></div>
+            <div class="seat seat--1--4--"></div>
+            <div class="seat seat--1--5--"></div>
+            <div class="seat seat--1--6--"></div>
+            <div class="seat seat--1--7--"></div>
+          </div>
+
+          <div class="row">
+            <div class="seat seat--2--0--"></div>
+            <div class="seat seat--2--1--"></div>
+            <div class="seat seat--2--2--"></div>
+            <div class="seat seat--2--3--"></div>
+            <div class="seat seat--2--4--"></div>
+            <div class="seat seat--2--5--"></div>
+            <div class="seat seat--2--6--"></div>
+            <div class="seat seat--2--7--"></div>
+          </div>
+
+          <div class="row">
+            <div class="seat seat--3--0--"></div>
+            <div class="seat seat--3--1--"></div>
+            <div class="seat seat--3--2--"></div>
+            <div class="seat seat--3--3--"></div>
+            <div class="seat seat--3--4--"></div>
+            <div class="seat seat--3--5--"></div>
+            <div class="seat seat--3--6--"></div>
+            <div class="seat seat--3--7--"></div>
+          </div>
+
+          <div class="row">
+            <div class="seat seat--4--0--"></div>
+            <div class="seat seat--4--1--"></div>
+            <div class="seat seat--4--2--"></div>
+            <div class="seat seat--4--3--"></div>
+            <div class="seat seat--4--4--"></div>
+            <div class="seat seat--4--5--"></div>
+            <div class="seat seat--4--6--"></div>
+            <div class="seat seat--4--7--"></div>
+          </div>
+
+          <div class="row">
+            <div class="seat seat--5--0--"></div>
+            <div class="seat seat--5--1--"></div>
+            <div class="seat seat--5--2--"></div>
+            <div class="seat seat--5--3--"></div>
+            <div class="seat seat--5--4--"></div>
+            <div class="seat seat--5--5--"></div>
+            <div class="seat seat--5--6--"></div>
+            <div class="seat seat--5--7--"></div>
+          </div>
+        </div>
+      </div>
+      <div class="main main_right">
+        <ul class="main_right--lists">
+          <li>
+            <div class="main_right--listsitems">PHIM</div>
+            <div class="main_right--listscontent" id="movie"></div>
+          </li>
+          <li class="flex">
+            <div class="main_right--listsitems">RẠP</div>
+            <div class="main_right--listscontent" id="cinema"></div>
+          </li>
+          <li class="flex">
+            <div class="main_right--listsitems">PHÒNG</div>
+            <div class="main_right--listscontent" id="hall"></div>
+          </li>
+          <li class="flex">
+            <div class="main_right--listsitems">NGÀY</div>
+            <div class="main_right--listscontent" id="showDate"></div>
+          </li>
+          <li class="flex">
+            <div class="main_right--listsitems">GIỜ</div>
+            <div class="main_right--listscontent" id="showTime"></div>
+          </li>
+          <li class="flex">
+            <div class="main_right--listsitems">GHẾ</div>
+            <div class="main_right--listscontent" id="count"></div>
+          </li>
+          <li class="flex">
+            <div class="main_right--listsitems">GIÁ</div>
+            <div class="main_right--listscontent" id="price"></div>
+          </li>
+        </ul>
+        <!-- <p class="text">
+        You have selected <span id="count">0</span> seats for a price of $<span id="price">0</span>
+      </p> -->
+        <button class="btn btn_confirm"> XÁC NHẬN</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+<script src="/javascripts/reservation.js"></script>
+
+</html>

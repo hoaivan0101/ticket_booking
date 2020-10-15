@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layout/header') -%>
+<link rel="stylesheet" href="/stylesheets/show.css">
+
+<body>
+
+  <%- include('layout/navbar') -%>
+
+  <!-- Movie Section - Start Here -->
+  <div class="container text-center my-5"  id="movie-block">
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a class="nav-link active" data-toggle="pill" href=#showing>PHIM ĐANG CHIẾU</a></li>
+      <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#upcoming">PHIM SẮP CHIẾU</a></li>
+    </ul>
+    <div class="tab-content">
+      <div id="showing" class="tab-pane fade in active show">
+        <div class="row">
+        </div>
+      </div>
+      <div id="upcoming" class="tab-pane fade">
+        <div class="row">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Movie Section - End Here -->
+
+  <%- include('layout/footer') -%>
+  <%- include('layout/script') -%>
+  <script src="/javascripts/movie_all.js"></script>
+</body>
+</html>
