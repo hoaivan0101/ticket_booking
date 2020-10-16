@@ -112,3 +112,8 @@ footer {
 .img-fluid{
   height: 450px;
 }
+
+/* HEADER */
+.header{
+  background: black;
+}
