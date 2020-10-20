@@ -8,8 +8,10 @@ $(document).ready(function () {
         type: 'GET'
     })
           .then(data => {
+              console.log();
               var seat = data[0].seat;
               var pos = [];
+              var rawdata = {title:data[1].title,cinema:data[0].cinema,hall:data[0].hall,showDate:data[0].showDate,showTime:data[0].showTime}
               $('#movie').append(`${data[1].title}`);
               $('#cinema').append(`${data[0].cinema}`);
               $('#hall').append(`${data[0].hall}`);
@@ -48,17 +50,38 @@ $(document).ready(function () {
               
             // Confirm               
               $('.btn').click(function () {
-                  if (pos.length == 0) { alert('CHUA CHON GHE'); return false}
-                $.ajax({
-                    url: '/cart/'+id, 
-                    type: 'POST',
-                    data: { seat: seat, pos:pos },
-                    
-                })
+                  if (pos.length == 0) { alert('CHUA CHON GHE'); return false };
+                  rawdata.count = count;
+                  rawdata.price = count * 45000;
+                  
+                  $.ajax({
+                      url: '/cart/'+id, 
+                      type: 'POST',
+                      data: { seat: seat, pos:pos },
+                      
+                    })
                     .then(data => {
                         if (data == 'PICKED') { alert('GHE DA DUOC CHON') }
                         else { alert('DAT THANH CONG'); window.location = "/" }
                     })
+                    
+                $.ajax({ 
+                    url: '/userinfo',
+                    type: 'POST',
+                    data: {cart:rawdata}
+                })
+                  
+                $.ajax({
+                url: '/userinfo',
+                type: 'GET',
+                })
+                    .then(data => {
+                    $.ajax({ 
+                        url: '/send-email',
+                        type: 'POST',
+                        data: {to:data.email,subject:'Confirm',body:'rawdata'}
+                    })
+                })
             })
         })
           .catch(err => {
