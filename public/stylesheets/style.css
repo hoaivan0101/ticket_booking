@@ -35,7 +35,7 @@ footer {
 
 .findfilm:hover{
   cursor: pointer;
-  color: red;
+  color:rgba(255,255,255,.75)
 }
 
 
@@ -94,10 +94,11 @@ footer {
   left: 0;
   right: 0;
   z-index: 999;
+  background:rgba(0, 0, 0, 0.11);
 }
 
 .backtotop{
-  background:rgba(0, 0, 0, 0.733);
+  background:rgba(0, 0, 0, 0.329);
   color: white;
   position:fixed;
   left: 80%;
@@ -120,7 +121,8 @@ footer {
 }
 
 .navbar_stick{
-  background: rgba(41, 41, 41, 0.685);
+  background:#020202;
+  color: white;
 }
 
 .navbar{
@@ -140,3 +142,75 @@ footer {
 .img-fluid--Carousel{
   width: 100%;
 }
+
+.navbar-dark .navbar-nav .nav-link{
+  color: white;
+}
+
+/* FOOTER */
+
+.footer{
+  background: #020202;
+  height: 400px;
+  color: white;
+  padding: 20px;
+}
+
+ul{
+  list-style: none;
+}
+
+.footer__info li{
+  font-size: 1.2rem;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.footer__info--dev{
+ position: relative;
+ display:flex;
+}
+
+.footer__info--dev img{
+  height: 70px;
+  border-radius: 50%;
+}
+
+.footer__info--devinfo{
+  margin-left: 20px;
+  /* height: 100%; */
+
+  display: flex;
+  align-items: center;
+}
+
+.footer__info--devinfo div{
+  background: rgba(255, 255, 255, 0.11);
+  width: 300px;
+  padding: 10px;
+  height: 80%;
+  text-align: left;
+}
+
+.footer__info--devinfo p{
+  display: block;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 968px) {
+  .footer__info--devinfo{
+    display:none;
+  }
+}
+
+.footer__contact{
+  display:flex;
+  flex-direction:column;
+  align-items: bottom;
+}
+
+/* MOVIESHOWUP */
+.movieshowup:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
