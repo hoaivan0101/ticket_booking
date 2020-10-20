@@ -1,0 +1,64 @@
+<!-- Navigation Bar layout -->
+<div class="header">
+    <div class="navbar_stick">
+        <div class="grid wide">
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <a class="navbar-brand" href="/">NODEMY</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto">
+                        <a href="/movie" class="nav-item nav-link">PHIM</a>
+                    </div>
+                    <form class="form-inline mx-auto form_findfilm">
+                        <label class="findfilm" for="findfilm">TÌM PHIM</label>
+                        <input type="checkbox" name="findfilm" id="findfilm" hidden>
+                        <label class="header__overlay" for="findfilm"></label>
+                        <div class="header__findfilm text-center">
+                            <input type="text" name="q" id="idfind" placeholder="Nhập tên phim...">
+                            <div class="namequery"></div>
+                        </div>
+                    </form>
+                    <div class="navbar-nav navbar-right" id="usernamenavbar">
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="abc">
+        <div class="carousel_stick">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Carousel indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for carousel items -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/images/poster1.jpg" class="img-fluid--Carousel" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/poster2.jpg" class="img-fluid--Carousel" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/poster3.jpg" class="img-fluid--Carousel" alt="">
+                    </div>
+                </div>
+                <!-- Carousel controls -->
+                <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                    <span><i class="fa fa-angle-left fa-5x"></i></span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                    <span><i class="fa fa-angle-right fa-5x"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/javascripts/jquery-3.5.1.min.js"></script>
+<script src="/javascripts/navbar.js"></script>

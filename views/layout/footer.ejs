@@ -1,4 +1,83 @@
 <!-- Footer Layout -->
-<footer class="container-fluid text-center">
-    <p>Footer Text</p>
-</footer>
+<div class="footer">
+    <div class="grid wide">
+        <div class="row">
+            <ul class="footer__info l-6 m-6 c-0">
+                <h3>ABOUT US</h3>
+                <li class="footer__info--dev">
+                    <div>
+                        <p>Lưu Minh Tâm</p>
+                        <img src="/images/Mr.Tam.jpg" class="footer__info--devTam--hover"></img>
+                    </div>
+                    <div class="footer__info--devinfo">
+                        <div>
+                            <p>Email: mtam@gmail.com</p>
+                            <p>Address: TP Đà Nẵng</p>
+                            <p>Born: 1990</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="footer__info--dev">
+                    <div>
+                        <p>Trần Hoài Văn</p>
+                        <img src="/images/Van.png" class="footer__info--devTam--hover"></img>
+                    </div>
+                    <div class="footer__info--devinfo">
+                        <div>
+                            <p>Email: hoaivan0101@gmail.com</p>
+                            <p>Address: TP Huế</p>
+                            <p>Born: 1993</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="footer__contact l-6 m-6 c-12">
+                <h3>SUGGESTIONS</h3>
+                <div class="text-left">
+                    <form action="/send-email" method="post">
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <input type="email" class="form-control" name="to" required placeholder="Your Email">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" name="subject" required placeholder="Title">
+                            </div>
+                        </div>
+                        <p></p>
+                        <div class="row">
+                            <div class="form-group col-md-8" style="color:black">
+                                <textarea id="classic-editor" cols="5" rows="5" class="form-control"
+                                    name="body"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <button type="submit" class="btn btn-success">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/16.0.0/classic/ckeditor.js"></script>
+<script>
+    $(document).ready(function () {
+        ClassicEditor
+            .create(document.querySelector('#classic-editor'), {
+                initialData: `<p>Type your suggestions here...</p>
+                              <p>Thank you for your suggestions</p>`
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    })
+</script>

@@ -8,7 +8,7 @@ const movieController = require('../controllers/movieController')
 router.get('/', movieController.homepage);
 
 /* GET all movies page */
-router.get('/movie', checkAuth, movieController.movie);
+router.get('/movie', movieController.movie);
 
 /* GET list of showing movies */
 router.get('/movie/showing', movieController.showingList);

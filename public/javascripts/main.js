@@ -17,7 +17,7 @@ $(document).ready(()=>{
         // Insert movie list to PHIM DANG CHIEU Section
         data.slice(0,6).forEach(movie => {
             let movieItem = $(`
-                <div class="col-sm-4 col-6">
+                <div class="col-md-6 col-xl-4 col-12 movieshowup">
                     <a href="/movie/${movie._id}" class="stretched-link">
                         <img src=${movie.poster} class="img-fluid py-2" alt="poster">
                     </a>
@@ -38,7 +38,7 @@ $(document).ready(()=>{
     .then(data=>{
         data.slice(0,6).forEach(movie => {
             let movieItem = $(`
-                <div class="col-sm-4 col-6">
+                <div class="col-md-6 col-xl-4 col-12 movieshowup">
                     <a href="/movie/${movie._id}" class="stretched-link">
                         <img src=${movie.poster} class="img-fluid py-2" alt="poster">
                     </a>
